@@ -38,29 +38,61 @@ date: 2022-11-30 10:25:30 +0900
 ---
 <!-- outline-start -->
 
-##Git
+## Git
+<br>
 
-##Github
+* Git이란?<br><br>
+Git은 컴퓨터 파일의 변경사항을 추적하고 여러 명의 사용자들 간에 해당 파일들의 작업을 조율하기 위한 스냅샷 스트림 기반의 분산 버전 관리 시스템이다. 또는 이러한 명령어를 가리킨다. 자세한 내용은 [여기서][What-is-Git] 확인할 수 있다.
+<br><br><br>
+* Git 사용<br><br>
+컴퓨터에 Git을 설치하면 사용할 수 있다. 윈도우 운영체제에서의 Git 설치는 [여기서..][DownloadForWindow]
 
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.<!-- outline-end --> You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+<br><br><br><br>
+## Github
+<br>
 
-Jekyll also offers powerful support for code snippets:
+- **Github이란**<br><br>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+Ruby on Rails로 작성된 분산 버전 관리 툴인 깃 저장소(Git repository) 호스팅을 지원하는 웹 서비스이다. 이 또한 자세한 내용은 [여기서][What-is-GitHub] 확인할 수 있다.
+<br><br><br>
+- **Github 사용**<br><br>
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
+처음이라면 [Github 웹사이트][Github]에 회원가입을 하고 로그인을 한 뒤 repository를 생성하자.
+repository를 생성했다면 이것을 내 컴퓨터에서도 사용하기 위해서는 내 컴퓨터로 복사해서 local repository로 써야한다.<br><br>
+아래 명령어를 터미널에 입력해서 Github 웹 상의 respository(이를 remote repository 또는 원격 저장소라고 부른다.)를 내 컴퓨터로 가져오자.
+```bash
+$ git clone (your remote repository address)
+```
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+<br>local repository에서 최초 설정을 하지 않았다면 아래와 같이 해주자.
+```bash
+$ git config --global user.name "yourName"
+$ git config --global user.email "yourEmail"
+```
+<br>local repository에서 변경한 내용을 remote repository에도 반영하려면 add, commit, push 순으로 명령어를 입력하면 된다.<br><br>
+```bash
+$ git add .
+```
+이 명령어를 입력하면 모든 변경 파일들을 add 한다.<br><br>
+```bash
+$ git commit -m "(커밋 메세지 입력)"
+```
+변경 사항들에 대한 메세지를 커밋 메세지로 입력하고 commit 한다.<br><br>
+```bash
+$ git push
+```
+local repository에서 새롭게 생긴 commit들을 remote repository로 올린다.<br><br>
+이때 local repository와 remote repository에서 서로 동기화 하기 전에 같은 파일을 수정하면 conflict가 발생하므로 push 하기 전에 pull 해서 동기화 해주면 좋다.
+```bash
+$ git pull
+```
+
+
+[What-is-Git]: https://git-scm.com/book/en/v2/Getting-Started-What-is-Git%3F
+[What-is-GitHub]: https://git-scm.com/book/en/v2/GitHub-Account-Setup-and-Configuration
+[DownloadForWindow]: https://git-scm.com/download/win
+[Github]: https://github.com/
 
 <div id="disqus_thread"></div>
 <script>
