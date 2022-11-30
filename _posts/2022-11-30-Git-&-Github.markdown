@@ -11,7 +11,7 @@ category: make my blog
 # multiple tag entries are possible
 tags: [jekyll, my blog, git]
 # thumbnail image for post
-img: ":post_pic3.jpg"
+img: ":github.jpg"
 # disable comments on this page
 #comments_disable: true
 
